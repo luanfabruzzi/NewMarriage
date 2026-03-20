@@ -1,0 +1,58 @@
+<!-- pages/convidados.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Convidados</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assents/css/global.css">
+    <link rel="stylesheet" href="../assents/css/convidados.css">
+    <script src="../assents/js/main.js" defer></script>
+    <script src="../assents/js/funcaoDeInteracao.js" defer></script>
+</head>
+<body class="bg-[var(--cor-fundo)]">
+    <div class="max-w-7xl mx-auto px-6 py-12">
+        <!-- HEADER -->
+        <div class="flex justify-between items-center mb-12">
+            <h1 class="text-5xl font-serif">Lista de Convidados</h1>
+            <div onclick="window.location='login.html'" 
+                 class="text-sm cursor-pointer text-slate-400 hover:text-red-600">SAIR</div>
+        </div>
+
+        <!-- ADD GROUP -->
+        <div class="flex gap-4 mb-8">
+            <input id="new-group-name" type="text" placeholder="Nome do grupo (ex: Família Noivo)"
+                   class="flex-1 px-6 py-4 rounded-2xl border border-slate-200 focus:border-[var(--cor-principal)]">
+            <button onclick="addNewGroup()" 
+                    class="px-10 bg-[var(--cor-principal)] text-white rounded-2xl font-medium">
+                + NOVO GRUPO
+            </button>
+        </div>
+
+        <!-- GRUPOS (preenchido via JS) -->
+        <div id="groups-container" class="space-y-12">
+            <!-- GRUPOS DINÂMICOS -->
+        </div>
+
+        <!-- DASHBOARD -->
+        <div class="mt-20 bg-white rounded-3xl shadow-xl p-10">
+            <h3 class="text-3xl font-medium mb-8">Dashboard de Presenças</h3>
+            <div class="grid grid-cols-3 gap-8 text-center">
+                <div>
+                    <div id="total-convidados" class="text-7xl font-light text-slate-300">0</div>
+                    <div class="text-sm uppercase tracking-widest">Total</div>
+                </div>
+                <div>
+                    <div id="veio-count" class="text-7xl font-light text-emerald-500">0</div>
+                    <div class="text-sm uppercase tracking-widest text-emerald-500">Veio ✓</div>
+                </div>
+                <div>
+                    <div id="faltou-count" class="text-7xl font-light text-red-500">0</div>
+                    <div class="text-sm uppercase tracking-widest text-red-500">Faltou ✕</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

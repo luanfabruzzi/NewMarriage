@@ -1,0 +1,95 @@
+/* ESTILOS ADICIONAIS PARA MOBILE */
+        body {
+            padding: 20px 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        .card {
+            border: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .form-control {
+            border: 1px solid #e0e0e0;
+            padding: 12px 15px;
+            font-size: 16px; /* Evita zoom em iOS */
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            border-color: #6c63ff;
+            box-shadow: 0 0 0 0.2rem rgba(108, 99, 255, 0.25);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, #6c63ff, #5a52d5);
+            border: none;
+            padding: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #5a52d5, #4942c4);
+            transform: translateY(-2px);
+        }
+        
+        .logo-container {
+            margin-bottom: 30px;
+        }
+        
+        .logo-container img {
+            height: 80px;
+            margin-bottom: 15px;
+        }
+        
+        .alert {
+            display: none;
+            border-radius: 8px;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+        }
+        
+        .password-toggle {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #6c757d;
+        }
+        
+        .password-input-container {
+            position: relative;
+        }
+        
+        /* ANIMAÇÃO DE CARREGAMENTO */
+        .spinner-border {
+            display: none;
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-left: 10px;
+        }
+        
+        /* MELHORIA PARA TOQUE EM DISPOSITIVOS MÓVEIS */
+        button, a, .btn {
+            -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+        }
+        
+        /* RESPONSIVIDADE */
+        @media (max-width: 576px) {
+            .card-body {
+                padding: 30px 20px !important;
+            }
+            
+            .fs-1 {
+                font-size: 2rem !important;
+            }
+        }

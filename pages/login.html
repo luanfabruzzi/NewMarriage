@@ -1,0 +1,46 @@
+<!-- pages/login.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Casamento</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assents/css/global.css">
+    <link rel="stylesheet" href="../assents/css/login.css">
+    <script src="../assents/js/main.js" defer></script>
+    <script src="../assents/js/login.js" defer></script>
+</head>
+<body class="bg-[var(--cor-fundo)] min-h-screen flex items-center justify-center">
+    <div class="max-w-md w-full mx-4 bg-white rounded-3xl shadow-2xl p-10">
+        <div class="text-center mb-10">
+            <span class="text-5xl font-serif">CASAMENTO</span>
+        </div>
+        
+        <form id="login-form" class="space-y-8">
+            <div>
+                <label class="block text-sm font-medium mb-2">USUÁRIO</label>
+                <input id="username" type="text" 
+                       class="w-full px-6 py-4 rounded-2xl border border-slate-200 focus:border-[var(--cor-principal)] outline-none text-lg"
+                       placeholder="casamenteiro" required>
+            </div>
+            <div>
+                <label class="block text-sm font-medium mb-2">SENHA</label>
+                <input id="password" type="password" 
+                       class="w-full px-6 py-4 rounded-2xl border border-slate-200 focus:border-[var(--cor-principal)] outline-none text-lg"
+                       placeholder="••••••••" required>
+            </div>
+            
+            <button type="submit"
+                    class="w-full py-5 bg-[var(--cor-principal)] text-white rounded-2xl text-lg font-medium hover:bg-blue-700 transition">
+                ENTRAR
+            </button>
+        </form>
+        
+        <p class="text-center text-xs text-slate-400 mt-8">
+            Usuário: casamenteiro<br>
+            Senha: 12345678
+        </p>
+    </div>
+</body>
+</html>

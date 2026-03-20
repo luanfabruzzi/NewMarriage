@@ -1,0 +1,119 @@
+/* assents/css/global.css */
+/* CORES CENTRALIZADAS - VOCÊ PODE MUDAR AQUI DEPENDENDO DO CASAL */
+:root {
+    --cor-principal: #2563eb;     /* azul padrão (pode trocar para qualquer cor) */
+    --cor-secundaria: #f8fafc;
+    --cor-fundo: #ffffff;
+    --cor-texto: #0f172a;
+    --cor-destaque: #eab308;
+    --cor-sucesso: #10b981;
+    --cor-erro: #ef4444;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.prose {
+    color: var(--cor-texto);
+}
+
+.btn-primary {
+    background-color: var(--cor-principal);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgb(37 99 235 / 0.3);
+}
+
+/* Estilos sofisticados base */
+.card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15);
+}
+        /* ESTILOS ADICIONAIS PARA MOBILE */
+        @media (max-width: 768px) {
+            .navbar-brand img {
+                height: 40px !important;
+            }
+            
+            .display-3 {
+                font-size: 2.5rem !important;
+            }
+            
+            .fs-4 {
+                font-size: 1.1rem !important;
+            }
+            
+            .btn {
+                font-size: 0.9rem !important;
+            }
+            
+            .card {
+                margin-bottom: 1rem;
+            }
+            
+            #pix-key-display {
+                font-size: 0.9rem !important;
+                word-break: break-all;
+            }
+            
+            footer img {
+                height: 60px !important;
+            }
+        }
+        
+        /* MELHORIA PARA SCROLL SUAVE */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* MELHORIA PARA TOQUE EM DISPOSITIVOS MÓVEIS */
+        button, a, .btn {
+            -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+        }
+        
+        /* ANIMAÇÃO DE CARREGAMENTO */
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* ESTILO PARA SELEÇÃO DE TEXTO */
+        .select-all {
+            -webkit-user-select: all;
+            user-select: all;
+        }
+        
+        /* MELHORIA PARA IMAGENS */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* BOTÃO DE VOLTAR AO TOPO */
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            z-index: 1000;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
